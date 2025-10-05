@@ -5,7 +5,7 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 #header-hstack {display:flex; align-items:center; width:100%; justify-content:space-between;}
 #sidebar-button {cursor:pointer; font-size:32px; padding:10px; margin-left: 20px; border-radius:4px; background:#333; user-select:none;}
 #logo-text {display:flex; align-items:center; text-align: center; gap: 0px; margin-right: auto;}
-#header-logo {height:70px;}
+#header-logo {height:100px;}
 #side-menu {position:fixed; top:0; left:-280px; width:240px; height: 100%; background:#111; color:white; transition:left 0.3s ease; padding:100px 10px 20px; box-shadow:2px 0 6px rgba(0,0,0,0.3); z-index:900;}
 #sidebar-toggle:checked ~ #side-menu {left:0;}
 .somebutton{text-align: center;}
@@ -25,7 +25,7 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 @media (max-width: 991px) {
 #header-logo {height: 50px;}
 #site-hat {height: 80px; padding: 0 0.5rem;}
-#sidebar-button {cursor: pointer;font-size: 32px; padding: 0 10px; /* убрал верх/низ */margin-left: 20px;border-radius: 4px;background: #333;user-select: none;height: 100%; display: flex;align-items: center;}
+#sidebar-button {cursor: pointer;font-size: 32px; padding: 0 10px; margin-left: 20px; border-radius: 4px;background: #333;user-select: none;height: 100%; display: flex;align-items: center;}
 #side-menu {width: 200px; padding: 80px 10px 20px;}
 #side-menu a {font-size: 24px;}
 #site-content {padding: 80px 30px 30px;}
