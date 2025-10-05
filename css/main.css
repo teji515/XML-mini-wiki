@@ -21,3 +21,27 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 #site-cellar {height:90px; background:#222; color:white; display:flex; align-items:center; justify-content:flex-start;}
 .somelist{display: block; text-align: left;}
 #footer-logo {height:50px; margin-left:10px;}
+
+@media (max-width: 991px) {
+#header-logo {height: 50px;}
+#site-hat {height: 80px; padding: 0 0.5rem;}
+#side-menu {width: 200px; padding: 80px 10px 20px;}
+#side-menu a {font-size: 24px;}
+#site-content {padding: 80px 30px 30px;}
+.code-window {max-width: 90%; margin-left: 5%;}
+#site-cellar {height: 70px; padding: 0 10px;}
+#footer-logo {height: 40px;}
+}
+
+@media (max-width: 767px) {
+#header-logo {height: 40px;}
+#site-hat {height: 60px; padding: 0 0.5rem;}
+#logo-text {gap: 5px;}
+#side-menu {width: 180px; padding: 60px 10px 20px;}
+#side-menu a {font-size: 20px; margin: 8px 0;}
+#site-content {padding: 60px 15px 20px;}
+.code-window {max-width: 100%; margin-left: 0; padding: 0 10px;}
+.main-font {font-size: 20px; padding: 0 15px 15px 15px;}
+#site-cellar {height: 60px; padding: 0 5px;}
+#footer-logo {height: 30px;}
+}
