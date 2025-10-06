@@ -14,12 +14,12 @@
             <input type="checkbox" id="sidebar-toggle" hidden> 
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="#">Обратная связь</a>
+                        <a class="play-regular somebutton" href="#">О сайте</a>
+                        <a class="play-regular somebutton" href="#">FAQ</a>
                     </list>
             </aside>
 
@@ -40,11 +40,134 @@
                     <p class="play-regular main-font">XML <b>(eXtensible Markup Language)</b> — это язык разметки, который используется для хранения и передачи структурированных данных.<br>
                         В отличие от HTML, XML не задаёт визуальное оформление — его задача заключается в описании структуры данных. Основные строительные блоки XML — это <b>элементы</b> и <b>атрибуты</b>.</p>
                     <ol class="play-regular main-font">
-                        <li><b>Элементы (Tags)</b></li>
-                        <p class="play-regular main-font">Элемент XML представляет собой основную единицу данных. Он состоит из <b>открывающего тега</b>, <b>содержимого</b> и <b>закрывающего</b> тега:</p>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><b>Элементы (Tags)</b>
+                            <p class="play-regular main-font">Элемент XML представляет собой основную единицу данных. Он состоит из <b>открывающего тега</b>, <b>содержимого</b> и <b>закрывающего</b> тега:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;name&gt;Abdul&lt;/name&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li>&lt;name&gt; - <b>открывающий тег</b>, обозначает начало элемента</li>
+                                <li>Abdul - <b>содержимое элемента</b></li>
+                                <li>&lt;/name&gt; - <b>открывающий тег, конец элемента</b></li>
+                            </ul>
+                            <p class="play-regular main-font"><b>Пустые элементы</b> можно записывать в сокращённой форме:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;city /&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                        <p class="play-regular main-font">Это эквивалентно &lt;city&gt;&lt;/city&gt;</p></li>
+                        <li><b>Закрывающие теги</b>
+                            <p class="play-regular main-font">Каждый открывающий тег должен иметь соответствующий закрывающий тег. Это обязательное правило XML. <br><br>Примеры:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;age&gt;30&lt;/age&gt;
+&lt;country&gt;Austria&lt;/country&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li>Закрывающий тег повторяет имя открывающего, но с косой чертой /.</li>
+                                <li>Несоответствие имён тегов или отсутствие закрывающего тега приведёт к <b>ошибке парсинга</b>.</li>
+                            </ul></li>                        
+                        <li><b>Вложенность элементов</b>
+                            <p class="play-regular main-font">Элементы могут содержать другие элементы, формируя иерархическую структуру:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;person&gt;
+    &lt;name&gt;Abdul&lt;/name&gt;
+    &lt;age&gt;30&lt;/age&gt;
+        &lt;address&gt;
+            &lt;city&gt;Berlin&lt;/city&gt;
+            &lt;country&gt;Germany&lt;/country&gt;
+        &lt;address&gt;
+&lt;/person&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li>Закрывающий тег повторяет имя открывающего, но с косой чертой /.</li>
+                                <li>Несоответствие имён тегов или отсутствие закрывающего тега приведёт к <b>ошибке парсинга</b>.
+                            </ul>
+                            <p class="play-regular main-font">Элементы могут содержать другие элементы, формируя иерархическую структуру:</p><br>
+                            <list spacing="s" class="play-regular main-font somelist">
+                                <p class="play-regular main-font">1. Каждый родительский элемент может содержать любое количество дочерних элементов.</p>
+                                <p class="play-regular main-font">2. Дочерние элементы должны быть полностью вложены — закрывающий тег родителя идёт после всех закрывающих тегов детей.</p>
+                                <p class="play-regular main-font">3. Элементы <b>не должны пересекаться</b></p>
+                            </list>
+                                <hstack spacing="l"><div>
+                                    <p class="play-regular main-font">❌ Неправильно:</p>
+                                    <div class="code-window">
+                                        <pre class="xml-code-example">
+                                            <code>
+&lt;parent&gt;
+    &lt;child1&gt;
+    &lt;child2&gt;&lt;/child2&gt;
+&lt;child1&gt;
+&lt;/parent&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="play-regular main-font">✅ Правильно:</p>
+                                    <div class="code-window">
+                                        <pre class="xml-code-example">
+                                            <code>
+&lt;parent&gt;
+    &lt;child1&gt;&lt;/child1&gt;
+    &lt;child2&gt;&lt;/child2&gt;
+&lt;/parent&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                </hstack>
+                        </li>
+                        <li><b>Атрибуты элементов</b>
+                            <p class="play-regular main-font">Атрибуты позволяют хранить дополнительную информацию о элементе. Атрибуты размещаются внутри открывающего тега и задаются парами <b>имя="значение"</b>:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;person id="123" role="admin"&gt;
+    &lt;name&gt;Abdul&lt;/name&gt;
+&lt;/person&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li>id="123" — атрибут с идентификатором элемента</li>
+                                <li>role="admin" — атрибут с ролью</li>
+                                <li>Значения атрибутов всегда заключаются в кавычки (" или ').</li>
+                                <li>Атрибуты должны иметь уникальные имена внутри одного элемента.</li>
+                            </ul>
+                        </li>
+                        <li><b>Комбинирование элементов и атрибутов</b>
+                            <p class="play-regular main-font">Элементы и атрибуты можно использовать вместе для построения гибкой структуры данных:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;book id="001" genre="fantasy"&gt;
+    &lt;title&gt;The Hobbit&lt;/title&gt;
+    &lt;author&gt;J.R.R Tolkien&lt;/author&gt;
+    &lt;year&gt;1937&lt;/year&gt;
+&lt;/book&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <p class="play-regular main-font">Здесь:</p>
+                            <ul class="play-regular main-font">
+                                <li>&lt;book&gt; - родительский элемент с атрибутами id и genre</li>
+                                <li>&lt;title&gt;, &lt;author&gt;, &lt;year&gt; - дочерние элементы с текстом</li>
+                            </ul></li>
                         <li></li>
                         <li></li>
                         <li></li>
