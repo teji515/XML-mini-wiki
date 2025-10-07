@@ -3,30 +3,48 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 .content-wrapper {width: 100%; display:flex; flex-direction:column; min-height:100vh;}
 #site-hat {position:fixed; top:0; left:0; right:0; height:100px; background:#222; color:#fff; display:flex; align-items:center; z-index:1000; padding:0 1rem;}
 #header-hstack {display:flex; align-items:center; width:100%; justify-content:space-between;}
-#sidebar-button {cursor:pointer; font-size:32px; padding:10px; margin-left: 20px; border-radius:4px; background:#333; user-select:none;}
-#logo-text {display:flex; align-items: center; text-align: center; margin-right: auto;}
 #header-logo {height:100px;}
+.header-font {font-size: 30px; text-align: center; text-decoration: none; color: inherit;}
+#logo-text {display:flex; align-items: center; text-align: center; margin-right: auto;}
+
+#sidebar-button {cursor:pointer; font-size:32px; padding:10px; margin-left: 20px; border-radius:4px; background:#333; user-select:none;}
 #side-menu {position:fixed; top:0; left:-280px; width:240px; height: 100%; background:#111; color:white; transition:left 0.3s ease; padding:100px 10px 20px; box-shadow:2px 0 6px rgba(0,0,0,0.3); z-index:900;}
 #sidebar-toggle:checked ~ #side-menu {left:0;}
-.somebutton{text-align: center;}
 #side-menu a {display:block; color:rgb(0, 206, 34); text-decoration:none; width: 100%; font-size:30px; margin:10px 0; transition:color 0.2s;}
 #side-menu a:hover {color:#ffffff;}
+
 #site-content {flex:1; padding: 100px 50px 50px;}
 .main-headers {display: flex; justify-content: center; align-items: center; height: 100%; font-size: 26px;}
 .main-font {font-size: 26px; text-align: left; padding: 0px 50px 20px 50px;}
+
 .main-table {width: 100%; border-collapse: collapse;}
 .main-table th, .main-table td {border: 1px solid #333; padding: 8px 12px; text-align: left;}
 .main-table th {background-color: #f4f4f4; font-weight: bold;}
-.header-font {font-size: 30px; text-align: center;}
+
+
 .play-regular {font-family: "Play", sans-serif; font-weight: 400; font-style: normal;}
 .code-window {max-width: 750px; margin: 0px 0px 0px 50px; padding: 0px 0px 0px 15px; background: #836b6b; border-radius: 10px; overflow-x: auto;}
 .xml-code-example{font-family: monospace; color: #00ff00; margin: 0; white-space: pre; text-align: left;}
+
 #site-cellar {height:90px; background:#222; color:white; display:flex; align-items:center; justify-content:flex-start;}
-.somelist{display: block; text-align: left;}
 #footer-logo {height:50px; margin-left:10px;}
 
+.somebutton{text-align: center;}
+.somelist{display: block; text-align: left;}
+
+
+#floating-toc {position: fixed; bottom: 20px;right: 20px; z-index: 1000;}
+#toc-button {cursor: pointer; background-color: #4CAF50;border: none; border-radius: 50px; padding: 12px 20px;color: white; font-size: 16px;font-weight: bold;box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: background 0.2s;}
+#toc-button:hover {background-color: #45a049;}
+#toc-menu {margin-top: 10px; width: 350px; background-color: #fff; border: 1px solid #ccc; border-radius: 10px; padding: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.2);}
+#toc-menu ul {list-style: none; padding: 0; margin: 0;}
+#toc-menu li {margin: 8px 0;}
+#toc-menu a {text-decoration: none;color: #333; font-weight: 500;}
+#toc-menu a:hover {color: #4CAF50;}
+.toc-hidden {display: none;}
+
 @media (max-width: 991px) {
-#header-logo {height: 50px;}
+#header-logo {height: 70px;}
 #site-hat {height: 80px; padding: 0 0.5rem;}
 #sidebar-button {cursor: pointer;font-size: 32px; padding: 0 10px; margin-left: 20px; border-radius: 4px;background: #333;user-select: none;height: 100%; display: flex;align-items: center;}
 #side-menu {width: 200px; padding: 80px 10px 20px;}
@@ -38,9 +56,8 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 }
 
 @media (max-width: 767px) {
-#header-logo {height: 40px;}
+#header-logo {height: 50px;}
 #site-hat {height: 60px; padding: 0 0.5rem;}
-#logo-text {gap: 5px;}
 #side-menu {width: 180px; padding: 60px 10px 20px;}
 #side-menu a {font-size: 20px; margin: 8px 0;}
 #site-content {padding: 60px 15px 20px;}
