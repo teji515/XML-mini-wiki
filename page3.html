@@ -7,19 +7,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Сравнение XML с другими форматами данных</title>
 </head>
     <body>
         <div class="content-wrapper">
             <input type="checkbox" id="sidebar-toggle" hidden> 
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="#">Обратная связь</a>
+                        <a class="play-regular somebutton" href="#">О сайте</a>
+                        <a class="play-regular somebutton" href="#">FAQ</a>
                     </list>
             </aside>
 
@@ -34,6 +34,66 @@
                 </header>
 
                 <main id="site-content">
+                    <div class="play-regular main-headers">
+                        <h1>Сравнение XML с другими форматами данных</h1>
+                    </div>
+                    <p class="play-regular main-font">XML — это лишь один из способов структурировать и передавать данные. 
+                        Сегодня существуют и другие популярные форматы — JSON, YAML, CSV и HTML. Каждый из них имеет свои особенности и области применения.</p>
+                    <p class="play-regular main-font"><b>JSON (JavaScript Object Notation)</b> - наиболее распространённый формат для обмена данными между клиентом и сервером. 
+                        Он проще по синтаксису и легче читается человеком. JSON используется почти во всех современных API и веб-приложениях. 
+                        Однако в отличие от XML, JSON не поддерживает комментарии и не может описывать сложные схемы данных (например, с типами или проверками структуры).</p>
+                    <p class="play-regular main-font"><b>YAML (YAML Ain’t Markup Language)</b> применяется в основном для конфигурационных файлов. 
+                        Он визуально понятен, использует отступы вместо тегов, но из-за этого чувствителен к форматированию. 
+                        YAML часто используют в DevOps и современных системах развертывания (например, Docker и Kubernetes).</p>
+                    <p class="play-regular main-font"><b>CSV (Comma-Separated Values)</b> представляет собой простой табличный формат. 
+                        В нём данные хранятся в виде строк, разделённых запятыми. 
+                        CSV удобен для таблиц и баз данных, но не подходит для описания вложенных структур или сложных иерархий, как это делает XML.</p>
+                    <p class="play-regular main-font"><b>HTML (HyperText Markup Language)</b> - внешне похож на XML, но служит другой цели — отображению информации в браузере. 
+                        HTML описывает, как должен выглядеть документ, тогда как XML описывает, что именно в нём содержится.</p>
+                    <p class="play-regular main-font"><span style="font-style: italic;">Небольшая сводная таблица по форматам:</span></p>
+                    <table class="play-regular main-font main-table">
+                        <thead>
+                            <tr>
+                            <th>Формат</th>
+                            <th>Основное назначение</th>
+                            <th>Преимущества</th>
+                            <th>Недостатки</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td><strong>XML</strong></td>
+                            <td>Хранение и передача структурированных данных</td>
+                            <td>Гибкость, расширяемость, поддержка схем и валидации</td>
+                            <td>Много «лишнего» синтаксиса, громоздкость</td>
+                            </tr>
+                            <tr>
+                            <td><strong>JSON</strong></td>
+                            <td>Веб-API, обмен данными</td>
+                            <td>Компактный, читаемый, поддерживается JS</td>
+                            <td>Нет комментариев, не описывает схему</td>
+                            </tr>
+                            <tr>
+                            <td><strong>YAML</strong></td>
+                            <td>Конфигурации и DevOps</td>
+                            <td>Читаемость, простота</td>
+                            <td>Ошибки из-за пробелов, не всегда безопасен</td>
+                            </tr>
+                            <tr>
+                            <td><strong>CSV</strong></td>
+                            <td>Табличные данные</td>
+                            <td>Простота, совместимость</td>
+                            <td>Нет вложенности, не описывает структуру</td>
+                            </tr>
+                            <tr>
+                            <td><strong>HTML</strong></td>
+                            <td>Отображение данных</td>
+                            <td>Поддержка браузерами, визуальное форматирование</td>
+                            <td>Не для хранения или обмена данными</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
 
                 </main>
 

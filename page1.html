@@ -97,7 +97,7 @@
                                 <li>Закрывающий тег повторяет имя открывающего, но с косой чертой /.</li>
                                 <li>Несоответствие имён тегов или отсутствие закрывающего тега приведёт к <b>ошибке парсинга</b>.
                             </ul>
-                            <p class="play-regular main-font">Элементы могут содержать другие элементы, формируя иерархическую структуру:</p><br>
+                            <p class="play-regular main-font">Правила вложенности:</p>
                             <list spacing="s" class="play-regular main-font somelist">
                                 <p class="play-regular main-font">1. Каждый родительский элемент может содержать любое количество дочерних элементов.</p>
                                 <p class="play-regular main-font">2. Дочерние элементы должны быть полностью вложены — закрывающий тег родителя идёт после всех закрывающих тегов детей.</p>
@@ -168,10 +168,43 @@
                                 <li>&lt;book&gt; - родительский элемент с атрибутами id и genre</li>
                                 <li>&lt;title&gt;, &lt;author&gt;, &lt;year&gt; - дочерние элементы с текстом</li>
                             </ul></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            <p class="play-regular main-font"><b>Синтаксис XML: ключевые правила</b></p>
+                            <list spacing="s" class="play-regular main-font somelist">
+                            <p><b>1. Корневой элемент: </b>весь документ XML должен иметь один корневой элемент, который охватывает всё содержимое.</p>
+                            <p><b>2. Чувствительность к регистру:</b> &lt;Name&gt; и &lt;name&gt; — это разные элементы.</p>
+                            <p><b>3. Закрытие всех тегов: </b>каждый открывающий тег должен иметь закрывающий.</p>
+                            <p><b>4. Корректная вложенность: </b>элементы не должны пересекаться.</p>
+                            <p><b>5. Использование атрибутов: </b>уникальные имена внутри одного элемента, значения в кавычках.</p>
+                            <p><b>6. Прозрачность пробелов: </b>XML игнорирует лишние пробелы между тегами, но сохраняет их внутри текста.</p>
+                            </list>
+                        </li>
+                        <li><b>Пример корректного готового XML-документа</b>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;library&gt;
+    &lt;book id="001" genre="fantasy"&gt;
+        &lt;title&gt;The Hobbit&lt;/title&gt;
+        &lt;author&gt;J.R.R Tolkien&lt;/author&gt;
+        &lt;year&gt;1937&lt;/year&gt;
+    &lt;/book&gt;
+    &lt;book id="002" genre="sci-fi"&gt;
+        &lt;title&gt;Dune&lt;/title&gt;
+        &lt;author&gt;Frank Herbert&lt;/author&gt;
+        &lt;year&gt;1965&lt;/year&gt;
+    &lt;/book&gt;
+&lt;/library&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                        <ul class="play-regular main-font">
+                            <li>&lt;library&gt; - корневой элемент</li>
+                            <li>&lt;book&gt; - элементы с атрибутами</li>
+                            <li>&lt;title&gt;, &lt;author&gt;, &lt;year&gt; - дочерние элементы с текстом</li>
+                        </ul></li>
                     </ol>
+                    
                 </main>
 
         </div>

@@ -4,7 +4,7 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 #site-hat {position:fixed; top:0; left:0; right:0; height:100px; background:#222; color:#fff; display:flex; align-items:center; z-index:1000; padding:0 1rem;}
 #header-hstack {display:flex; align-items:center; width:100%; justify-content:space-between;}
 #sidebar-button {cursor:pointer; font-size:32px; padding:10px; margin-left: 20px; border-radius:4px; background:#333; user-select:none;}
-#logo-text {display:flex; align-items:center; text-align: center; gap: 0px; margin-right: auto;}
+#logo-text {display:flex; align-items: center; text-align: center; margin-right: auto;}
 #header-logo {height:100px;}
 #side-menu {position:fixed; top:0; left:-280px; width:240px; height: 100%; background:#111; color:white; transition:left 0.3s ease; padding:100px 10px 20px; box-shadow:2px 0 6px rgba(0,0,0,0.3); z-index:900;}
 #sidebar-toggle:checked ~ #side-menu {left:0;}
@@ -14,9 +14,12 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 #site-content {flex:1; padding: 100px 50px 50px;}
 .main-headers {display: flex; justify-content: center; align-items: center; height: 100%; font-size: 26px;}
 .main-font {font-size: 26px; text-align: left; padding: 0px 50px 20px 50px;}
-.header-font {font-size: 26px;}
+.main-table {width: 100%; border-collapse: collapse;}
+.main-table th, .main-table td {border: 1px solid #333; padding: 8px 12px; text-align: left;}
+.main-table th {background-color: #f4f4f4; font-weight: bold;}
+.header-font {font-size: 30px; text-align: center;}
 .play-regular {font-family: "Play", sans-serif; font-weight: 400; font-style: normal;}
-.code-window {max-width: 600px; margin: 0px 0px 0px 50px; padding: 0px 0px 0px 15px; background: #836b6b; border-radius: 10px; overflow-x: auto;}
+.code-window {max-width: 750px; margin: 0px 0px 0px 50px; padding: 0px 0px 0px 15px; background: #836b6b; border-radius: 10px; overflow-x: auto;}
 .xml-code-example{font-family: monospace; color: #00ff00; margin: 0; white-space: pre; text-align: left;}
 #site-cellar {height:90px; background:#222; color:white; display:flex; align-items:center; justify-content:flex-start;}
 .somelist{display: block; text-align: left;}

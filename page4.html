@@ -7,19 +7,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Namespaces в XML</title>
 </head>
     <body>
         <div class="content-wrapper">
             <input type="checkbox" id="sidebar-toggle" hidden> 
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
-                        <a class="play-regular somebutton" href="#">CLICK</a>
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="#">Обратная связь</a>
+                        <a class="play-regular somebutton" href="#">О сайте</a>
+                        <a class="play-regular somebutton" href="#">FAQ</a>
                     </list>
             </aside>
 
@@ -34,9 +34,83 @@
                 </header>
 
                 <main id="site-content">
-
+                    <div class="play-regular main-headers">
+                        <h1>Namespaces</h1>
+                    </div>
+                    <p class="play-regular main-font">В XML <b>namespace</b> (пространство имён) — это способ различать элементы и атрибуты, 
+                        которые могут иметь одинаковые имена, но использоваться в разных контекстах.<br><br>
+                        Например, на одной странице может быть элемент &lt;table&gt; для данных и &lt;table&gt; для оформления. 
+                        Без namespace браузер или парсер не сможет понять, какой именно &lt;table&gt; ты имеешь в виду.</p>
+                    <p class="play-regular main-font"><b>Зачем нужны Namespaces</b>
+                        <ul class="play-regular main-font">
+                            <li>Избежать конфликтов имен элементов и атрибутов.</li>
+                            <li>Позволить объединять разные XML-документы в один.</li>
+                            <li>Используются особенно часто в веб-сервисах, например SOAP или RSS.</li>
+                        </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Как задаются Namespaces</b>
+                        <ol class="play-regular main-font">
+                            <li><b>Через xmlns в корневом элементе</b>
+                                <div class="code-window">
+                                    <pre class="xml-code-example">
+                                        <code>
+&lt;root xmlns:ns="http://example.com/ns"&gt;
+    &lt;ns:item&gt;Пример&lt;/ns:item&gt;
+&lt;/root&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </li>
+                            <li><b>Без префикса</b>
+                                <div class="code-window">
+                                    <pre class="xml-code-example">
+                                        <code>
+&lt;root xmlns="http://example.com/ns"&gt;
+    &lt;item&gt;Пример&lt;/item&gt;
+&lt;/root&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                                <ul class="play-regular main-font">
+                                    <li>Здесь все элементы внутри &lt;root&gt; автоматически принадлежат указанному namespace.</li>
+                                    <li>Префикс не нужен.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <p class="play-regular main-font"><b>Пример использования (SOAP-запрос):</b>
+                        <div class="code-window">
+                            <pre class="xml-code-example">
+                                <code>
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;soap:Body&gt;
+        &lt;m:GetWeather xmlns:m="http://example.com/weather"&gt;
+            &lt;m:City&gt;Berlin&lt;/m:City&gt;
+        &lt;/m:GetWeather&gt;
+    &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    <ul class="play-regular main-font">
+                        <li>soap - пространство имён для стандартного SOAP-запроса.</li>
+                        <li>m — пространство имён для конкретного сервиса (погоды).</li>
+                        <li>Использование префиксов позволяет различать элементы с одинаковыми именами, но из разных областей.</li>
+                    </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Ключевые моменты</b>
+                        <ol class="play-regular main-font">
+                            <li>Namespace привязывается к <b>URL</b>, но этот URL не обязательно ведёт на реальный ресурс — это уникальный идентификатор.</li>
+                            <li>Элементы и атрибуты могут принадлежать разным namespace одновременно.</li>
+                            <li>Для работы с XML парсеры используют префиксы, чтобы понимать, к какому пространству имён принадлежит элемент.</li>
+                        </ol>
+                    </p>
+                    <p class="play-regular main-font"><b>В итоге:</b><br>
+                        Namespaces — это способ <b>разделять элементы с одинаковыми именами</b>, обеспечивать уникальность и безопасное объединение разных XML-документов. 
+                        Важны при работе с веб-сервисами, стандартами XML и сложными схемами.
+                    </p>
+                    <img src="resources/img/xml-namespace-syntax.webp" style="display: block; margin: 0 auto;">
                 </main>
-
         </div>
                 <footer id="site-cellar">
                     <hstack id="footer-hstack" spacing="s" stretch>
