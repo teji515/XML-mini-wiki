@@ -15,11 +15,11 @@
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
                         <a class="play-regular somebutton" href="index.html">Главная</a>
-                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
-                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
-                        <a class="play-regular somebutton" href="#">Обратная связь</a>
-                        <a class="play-regular somebutton" href="#">О сайте</a>
-                        <a class="play-regular somebutton" href="#">FAQ</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
                     </list>
             </aside>
 
@@ -27,7 +27,7 @@
                     <hstack spacing="l" id="header-hstack">
                         <label for="sidebar-toggle" id="sidebar-button">☰</label>
                             <hstack id="logo-text">
-                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo"></a>
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
                                 <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
                             </hstack>
                     </hstack>
@@ -67,9 +67,9 @@
                             </pre>
                         </div>
                         <ul class="play-regular main-font">
-                            <li>&lt;Dictionary&gt; - корневой элемент.</li>
-                            <li>&lt;Entry&gt; - отдельный элемент словаря.</li>
-                            <li>Атрибут key хранит уникальный идентификатор.</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;Dictionary&gt;</span> - корневой элемент.</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;Entry&gt;</span> - отдельный элемент словаря.</li>
+                            <li>Атрибут <span style="background-color: rgba(146, 146, 146, 0.363);">key</span> хранит уникальный идентификатор.</li>
                             <li>Содержимое элемента - значение.</li>
                         </ul>
                     </p>
@@ -116,7 +116,7 @@
                 <footer id="site-cellar">
                     <hstack id="footer-hstack" spacing="s" stretch>
                         <img src="resources/img/logo_xml.png" id="footer-logo">
-                        <p>© 2025 XML Mini-Wiki</p>
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
                     </hstack>
                 </footer>
     </body>

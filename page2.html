@@ -15,11 +15,11 @@
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
                         <a class="play-regular somebutton" href="index.html">Главная</a>
-                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
-                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
-                        <a class="play-regular somebutton" href="#">Обратная связь</a>
-                        <a class="play-regular somebutton" href="#">О сайте</a>
-                        <a class="play-regular somebutton" href="#">FAQ</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
                     </list>
             </aside>
 
@@ -27,7 +27,7 @@
                     <hstack spacing="l" id="header-hstack">
                         <label for="sidebar-toggle" id="sidebar-button">☰</label>
                             <hstack id="logo-text">
-                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo"></a>
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
                                 <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
                             </hstack>
                     </hstack>
@@ -72,10 +72,10 @@
                     </div>
                     <p class="play-regular main-font"><b>Объяснение структуры:</b>
                         <ul class="play-regular main-font">
-                            <li>&lt;soap:Envelope&gt; - главный контейнер, определяющий границы сообщения.</li>
-                            <li>&lt;soap:Body&gt; - основная часть, где содержится запрос или ответ.</li>
-                            <li>Элемент &lt;GetWeather&gt; - это конкретный метод, который сервер должен вызвать.</li>
-                            <li>Вложенные теги (&lt;City&gt;, &lt;Country&gt;) - передают параметры вызова.</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;soap:Envelope&gt;</span> - главный контейнер, определяющий границы сообщения.</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;soap:Body&gt;</span> - основная часть, где содержится запрос или ответ.</li>
+                            <li>Элемент <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;GetWeather&gt;</span> - это конкретный метод, который сервер должен вызвать.</li>
+                            <li>Вложенные теги <span style="background-color: rgba(146, 146, 146, 0.363);">(&lt;City&gt;, &lt;Country&gt;)</span> - передают параметры вызова.</li>
                         </ul>
                     </p>
                     <p class="play-regular main-font"><b>Ответ от сервера (SOAP response)</b>
@@ -115,7 +115,7 @@
                 <footer id="site-cellar">
                     <hstack id="footer-hstack" spacing="s" stretch>
                         <img src="resources/img/logo_xml.png" id="footer-logo">
-                        <p>© 2025 XML Mini-Wiki</p>
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
                     </hstack>
                 </footer>
     </body>

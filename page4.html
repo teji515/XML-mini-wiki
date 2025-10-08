@@ -15,11 +15,11 @@
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
                         <a class="play-regular somebutton" href="index.html">Главная</a>
-                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
-                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
-                        <a class="play-regular somebutton" href="#">Обратная связь</a>
-                        <a class="play-regular somebutton" href="#">О сайте</a>
-                        <a class="play-regular somebutton" href="#">FAQ</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
                     </list>
             </aside>
 
@@ -27,7 +27,7 @@
                     <hstack spacing="l" id="header-hstack">
                         <label for="sidebar-toggle" id="sidebar-button">☰</label>
                             <hstack id="logo-text">
-                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo"></a>
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
                                 <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
                             </hstack>
                     </hstack>
@@ -39,13 +39,13 @@
                     </div>
                     <p class="play-regular main-font">В XML <b>namespace</b> (пространство имён) — это способ различать элементы и атрибуты, 
                         которые могут иметь одинаковые имена, но использоваться в разных контекстах.<br><br>
-                        Например, на одной странице может быть элемент &lt;table&gt; для данных и &lt;table&gt; для оформления. 
-                        Без namespace браузер или парсер не сможет понять, какой именно &lt;table&gt; ты имеешь в виду.</p>
+                        Например, на одной странице может быть элемент <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;table&gt;</span> для данных и <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;table&gt;</span> для оформления. 
+                        Без namespace браузер или парсер не сможет понять, какой именно <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;table&gt;</span> ты имеешь в виду.</p>
                     <p class="play-regular main-font"><b>Зачем нужны Namespaces</b>
                         <ul class="play-regular main-font">
                             <li>Избежать конфликтов имен элементов и атрибутов.</li>
                             <li>Позволить объединять разные XML-документы в один.</li>
-                            <li>Используются особенно часто в веб-сервисах, например SOAP или RSS.</li>
+                            <li>Используются особенно часто в веб-сервисах, например SOAP или <a href="https://ru.wikipedia.org/wiki/RSS" target="_blank">RSS</a>.</li>
                         </ul>
                     </p>
                     <p class="play-regular main-font"><b>Как задаются Namespaces</b>
@@ -72,7 +72,7 @@
                                     </pre>
                                 </div>
                                 <ul class="play-regular main-font">
-                                    <li>Здесь все элементы внутри &lt;root&gt; автоматически принадлежат указанному namespace.</li>
+                                    <li>Здесь все элементы внутри <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;root&gt;</span> автоматически принадлежат указанному namespace.</li>
                                     <li>Префикс не нужен.</li>
                                 </ul>
                             </li>
@@ -93,8 +93,8 @@
                             </pre>
                         </div>
                     <ul class="play-regular main-font">
-                        <li>soap - пространство имён для стандартного SOAP-запроса.</li>
-                        <li>m — пространство имён для конкретного сервиса (погоды).</li>
+                        <li><span style="background-color: rgba(146, 146, 146, 0.363);">soap</span> - пространство имён для стандартного SOAP-запроса.</li>
+                        <li><span style="background-color: rgba(146, 146, 146, 0.363);">m</span> — пространство имён для конкретного сервиса (погоды).</li>
                         <li>Использование префиксов позволяет различать элементы с одинаковыми именами, но из разных областей.</li>
                     </ul>
                     </p>
@@ -109,7 +109,7 @@
                         Namespaces — это способ <b>разделять элементы с одинаковыми именами</b>, обеспечивать уникальность и безопасное объединение разных XML-документов. 
                         Важны при работе с веб-сервисами, стандартами XML и сложными схемами.
                     </p>
-                    <img src="resources/img/xml-namespace-syntax.webp" style="display: block; margin: 0 auto;">
+                    <img src="resources/img/xml-namespace-syntax.webp" style="display: block; margin: 0 auto;" alt="xml namespace image">
                     <div id="floating-toc">
                         <button id="toc-button">Содержание</button>
                         <nav id="toc-menu" class="toc-hidden">
@@ -128,7 +128,7 @@
                 <footer id="site-cellar">
                     <hstack id="footer-hstack" spacing="s" stretch>
                         <img src="resources/img/logo_xml.png" id="footer-logo">
-                        <p>© 2025 XML Mini-Wiki</p>
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
                     </hstack>
                 </footer>
     </body>

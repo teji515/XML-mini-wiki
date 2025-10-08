@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+    <body>
+        <div class="content-wrapper">
+            <input type="checkbox" id="sidebar-toggle" hidden> 
+            <aside id="side-menu">
+                    <list spacing="s" align-x="center"> 
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
+                    </list>
+            </aside>
+
+                <header id="site-hat">
+                    <hstack spacing="l" id="header-hstack">
+                        <label for="sidebar-toggle" id="sidebar-button">☰</label>
+                            <hstack id="logo-text">
+                                <img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную">
+                                <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
+                            </hstack>
+                    </hstack>
+                </header>
+
+                <main id="site-content">
+                    <div class="play-regular main-headers">
+                        <h1>FAQ</h1>
+                    </div>
+                    <ol class="play-regular main-font">
+                        <li><b>Что такое XML-схема (XSD) и зачем она нужна?</b>
+                            <p>XML-схема описывает структуру XML-документа: какие теги разрешены, их типы данных, порядок и атрибуты. 
+                                Схема помогает проверять корректность XML и использовать его в стандартизованных системах.</p>
+                        </li>
+                        <li><b>Чем отличается DTD от XSD?</b>
+                            <ul>
+                                <li>DTD (Document Type Definition) — старый способ описания структуры XML, проще, но ограничен типами данных.</li>
+                                <li>XSD — более современный, поддерживает типизацию, пространства имён и сложные структуры.</li>
+                            </ul>
+                        </li><br>
+                        <li><b>Как XML-словари используют namespaces?</b>
+                            <p>Namespaces позволяют разным словарям использовать одинаковые имена тегов без конфликтов. 
+                                Например, &lt;weather:City&gt; и &lt;geo:City&gt; могут сосуществовать в одном документе, не создавая неоднозначности.</p>
+                        </li>
+                        <li><b>Можно ли в XML-словари включать комментарии и метаданные?</b>
+                            <p>Да, XML поддерживает комментарии:<br>&lt;!-- Этот тег описывает город --&gt;<br>Метаданные можно хранить в атрибутах или специальных тегах словаря.</p>
+                        </li>
+                        <li><b>Чем полезны XML-словари для интеграции разных систем?</b>
+                            <ul>
+                                <li>Обеспечивают единый стандарт обмена данными</li>
+                                <li>Позволяют программам одинаково интерпретировать данные</li>
+                                <li>Ускоряют интеграцию и уменьшают ошибки при передаче данных</li>
+                            </ul>
+                        </li>
+                        <li><b>Можно ли объединять несколько словарей в одном XML-документе?</b>
+                            <p>Да, при помощи namespaces и правильного использования префиксов. 
+                                Это позволяет использовать теги разных словарей вместе, например для комплексного отчёта, который включает погодные и географические данные.</p>
+                        </li>
+                        <li><b>Какие инструменты помогают работать с XML-словари?</b>
+                            <ul>
+                                <li>XML-редакторы (например, XMLSpy, Oxygen XML)</li>
+                                <li>Валидаторы XSD (онлайн или встроенные в редакторы)</li>
+                                <li>Парсеры на языках программирования (Python lxml, Java JAXB, JS xml2js)</li>
+                            </ul>
+                        </li>
+                        <li><b>Какие ограничения есть у XML и словарей?</b>
+                            <ul>
+                                <li>Большой объём данных из-за открывающих и закрывающих тегов</li>
+                                <li>Сложнее парсить для веб-приложений по сравнению с JSON</li>
+                                <li>Требует согласованности схем при обмене данными между системами</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </main>
+
+        </div>
+                <footer id="site-cellar">
+                    <hstack id="footer-hstack" spacing="s" stretch>
+                        <img src="resources/img/logo_xml.png" id="footer-logo">
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
+                    </hstack>
+                </footer>
+    </body>
+</html>

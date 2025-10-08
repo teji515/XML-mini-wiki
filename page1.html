@@ -15,11 +15,11 @@
             <aside id="side-menu">
                     <list spacing="s" align-x="center"> 
                         <a class="play-regular somebutton" href="index.html">Главная</a>
-                        <a class="play-regular somebutton" href="#">Полезные ресурсы</a>
-                        <a class="play-regular somebutton" href="#">Видео-уроки</a>
-                        <a class="play-regular somebutton" href="#">Обратная связь</a>
-                        <a class="play-regular somebutton" href="#">О сайте</a>
-                        <a class="play-regular somebutton" href="#">FAQ</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
                     </list>
             </aside>
 
@@ -27,7 +27,7 @@
                     <hstack spacing="l" id="header-hstack">
                         <label for="sidebar-toggle" id="sidebar-button">☰</label>
                             <hstack id="logo-text">
-                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo"></a>
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
                                 <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
                             </hstack>
                     </hstack>
@@ -50,9 +50,9 @@
                                 </pre>
                             </div>
                             <ul class="play-regular main-font">
-                                <li>&lt;name&gt; - <b>открывающий тег</b>, обозначает начало элемента</li>
-                                <li>Abdul - <b>содержимое элемента</b></li>
-                                <li>&lt;/name&gt; - <b>открывающий тег, конец элемента</b></li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;name&gt;</span> - <b>открывающий тег</b>, обозначает начало элемента</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">Abdul</span> - <b>содержимое элемента</b></li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;/name&gt;</span> - <b>открывающий тег, конец элемента</b></li>
                             </ul>
                             <p class="play-regular main-font"><b>Пустые элементы</b> можно записывать в сокращённой форме:</p>
                             <div class="code-window">
@@ -62,7 +62,7 @@
                                     </code>
                                 </pre>
                             </div>
-                        <p class="play-regular main-font">Это эквивалентно &lt;city&gt;&lt;/city&gt;</p></li>
+                        <p class="play-regular main-font">Это эквивалентно <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;city&gt;&lt;/city&gt;</span></p></li>
                         <li><b>Закрывающие теги</b>
                             <p class="play-regular main-font">Каждый открывающий тег должен иметь соответствующий закрывающий тег. Это обязательное правило XML. <br><br>Примеры:</p>
                             <div class="code-window">
@@ -144,8 +144,8 @@
                                 </pre>
                             </div>
                             <ul class="play-regular main-font">
-                                <li>id="123" — атрибут с идентификатором элемента</li>
-                                <li>role="admin" — атрибут с ролью</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">id="123"</span> — атрибут с идентификатором элемента</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">role="admin"</span> — атрибут с ролью</li>
                                 <li>Значения атрибутов всегда заключаются в кавычки (" или ').</li>
                                 <li>Атрибуты должны иметь уникальные имена внутри одного элемента.</li>
                             </ul>
@@ -165,8 +165,8 @@
                             </div>
                             <p class="play-regular main-font">Здесь:</p>
                             <ul class="play-regular main-font">
-                                <li>&lt;book&gt; - родительский элемент с атрибутами id и genre</li>
-                                <li>&lt;title&gt;, &lt;author&gt;, &lt;year&gt; - дочерние элементы с текстом</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;book&gt;</span> - родительский элемент с атрибутами id и genre</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;title&gt;, &lt;author&gt;, &lt;year&gt;</span> - дочерние элементы с текстом</li>
                             </ul></li>
                         <li>
                             <p class="play-regular main-font"><b>Синтаксис XML: ключевые правила</b></p>
@@ -199,9 +199,9 @@
                                 </pre>
                             </div>
                         <ul class="play-regular main-font">
-                            <li>&lt;library&gt; - корневой элемент</li>
-                            <li>&lt;book&gt; - элементы с атрибутами</li>
-                            <li>&lt;title&gt;, &lt;author&gt;, &lt;year&gt; - дочерние элементы с текстом</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;library&gt;</span> - корневой элемент</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;book&gt; </span>- элементы с атрибутами</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;title&gt;, &lt;author&gt;, &lt;year&gt;</span> - дочерние элементы с текстом</li>
                         </ul></li>
                     </ol>
                         <div id="floating-toc">
@@ -223,7 +223,7 @@
                 <footer id="site-cellar">
                     <hstack id="footer-hstack" spacing="s" stretch>
                         <img src="resources/img/logo_xml.png" id="footer-logo">
-                        <p>© 2025 XML Mini-Wiki</p>
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
                     </hstack>
                 </footer>
     </body>
