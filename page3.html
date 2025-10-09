@@ -51,61 +51,62 @@
                     <p class="play-regular main-font"><b>HTML (HyperText Markup Language)</b> - внешне похож на XML, но служит другой цели — отображению информации в браузере. 
                         HTML описывает, как должен выглядеть документ, тогда как XML описывает, что именно в нём содержится.</p>
                     <p class="play-regular main-font"><span style="font-style: italic;">Небольшая сводная таблица по форматам:</span></p>
-                    <table class="play-regular main-font main-table">
-                        <thead>
-                            <tr>
-                            <th>Формат</th>
-                            <th>Основное назначение</th>
-                            <th>Преимущества</th>
-                            <th>Недостатки</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td><strong>XML</strong></td>
-                            <td>Хранение и передача структурированных данных</td>
-                            <td>Гибкость, расширяемость, поддержка схем и валидации</td>
-                            <td>Много «лишнего» синтаксиса, громоздкость</td>
-                            </tr>
-                            <tr>
-                            <td><strong>JSON</strong></td>
-                            <td>Веб-API, обмен данными</td>
-                            <td>Компактный, читаемый, поддерживается JS</td>
-                            <td>Нет комментариев, не описывает схему</td>
-                            </tr>
-                            <tr>
-                            <td><strong>YAML</strong></td>
-                            <td>Конфигурации и DevOps</td>
-                            <td>Читаемость, простота</td>
-                            <td>Ошибки из-за пробелов, не всегда безопасен</td>
-                            </tr>
-                            <tr>
-                            <td><strong>CSV</strong></td>
-                            <td>Табличные данные</td>
-                            <td>Простота, совместимость</td>
-                            <td>Нет вложенности, не описывает структуру</td>
-                            </tr>
-                            <tr>
-                            <td><strong>HTML</strong></td>
-                            <td>Отображение данных</td>
-                            <td>Поддержка браузерами, визуальное форматирование</td>
-                            <td>Не для хранения или обмена данными</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div id="floating-toc">
-                        <button id="toc-button">Содержание</button>
-                        <nav id="toc-menu" class="toc-hidden">
-                            <ul>
-                                <li><a href="page1.html">Элементы и атрибуты XML</a></li>
-                                <li><a href="page2.html">Использование XML в реальных приложениях</a></li>
-                                <li><a href="page3.html">Сравнение XML с другими форматами данных</a></li>
-                                <li><a href="page4.html">Namespaces</a></li>
-                                <li><a href="page5.html">XML-словари</a></li>
-                            </ul>
-                        </nav>
+                    <div class="table-wrap">    
+                        <table class="play-regular main-font main-table">
+                                <thead>
+                                    <tr>
+                                    <th>Формат</th>
+                                    <th>Основное назначение</th>
+                                    <th>Преимущества</th>
+                                    <th>Недостатки</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td><strong>XML</strong></td>
+                                    <td>Хранение и передача структурированных данных</td>
+                                    <td>Гибкость, расширяемость, поддержка схем и валидации</td>
+                                    <td>Много «лишнего» синтаксиса, громоздкость</td>
+                                    </tr>
+                                    <tr>
+                                    <td><strong>JSON</strong></td>
+                                    <td>Веб-API, обмен данными</td>
+                                    <td>Компактный, читаемый, поддерживается JS</td>
+                                    <td>Нет комментариев, не описывает схему</td>
+                                    </tr>
+                                    <tr>
+                                    <td><strong>YAML</strong></td>
+                                    <td>Конфигурации и DevOps</td>
+                                    <td>Читаемость, простота</td>
+                                    <td>Ошибки из-за пробелов, не всегда безопасен</td>
+                                    </tr>
+                                    <tr>
+                                    <td><strong>CSV</strong></td>
+                                    <td>Табличные данные</td>
+                                    <td>Простота, совместимость</td>
+                                    <td>Нет вложенности, не описывает структуру</td>
+                                    </tr>
+                                    <tr>
+                                    <td><strong>HTML</strong></td>
+                                    <td>Отображение данных</td>
+                                    <td>Поддержка браузерами, визуальное форматирование</td>
+                                    <td>Не для хранения или обмена данными</td>
+                                    </tr>
+                                </tbody>
+                        </table>
                     </div>
+                        <div id="floating-toc">
+                            <button id="toc-button">Открыть <br>Содержание</button>
+                            <nav id="toc-menu" class="toc-hidden">
+                                <ul>
+                                    <li><a href="page1.html">Элементы и атрибуты XML</a></li>
+                                    <li><a href="page2.html">Использование XML в реальных приложениях</a></li>
+                                    <li><a href="page3.html">Сравнение XML с другими форматами данных</a></li>
+                                    <li><a href="page4.html">Namespaces</a></li>
+                                    <li><a href="page5.html">XML-словари</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     <script src="toc.js"></script>
                 </main>
 

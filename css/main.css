@@ -17,7 +17,8 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 .main-headers {display: flex; justify-content: center; align-items: center; height: 100%; font-size: 26px;}
 .main-font {font-size: 26px; text-align: left; padding: 0px 50px 20px 50px;}
 
-.main-table {width: 100%; border-collapse: collapse;}
+.table-wrap {width: 100%; overflow-x: auto;}
+.main-table {width: 100%; border-collapse: collapse; min-width: 600px;}
 .main-table th, .main-table td {border: 1px solid #333; padding: 8px 12px; text-align: left;}
 .main-table th {background-color: #f4f4f4; font-weight: bold;}
 
