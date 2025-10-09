@@ -50,11 +50,12 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 @media (max-width: 991px) {
 #header-logo {height: 70px;}
 #site-hat {height: 80px; padding: 0 0.5rem;}
-#sidebar-button {cursor: pointer;font-size: 32px; padding: 0 10px; margin-left: 20px; border-radius: 4px;background: #333;user-select: none;height: 100%; display: flex;align-items: center;}
+#sidebar-button {cursor: pointer;font-size: 32px; padding: 0 10px; margin-left: 20px; border-radius: 4px; background: #8f8f8f79;user-select: none;height: 100%; display: flex;align-items: center;}
 #side-menu {width: 200px; padding: 80px 10px 20px;}
 #side-menu a {font-size: 24px;}
 #site-content {padding: 80px 30px 30px;}
-.video-container {display: inline-block; position: relative; width: 90%; max-width: 600px; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.15); margin: 10px auto;}
+#video-row1, #video-row2 {flex-direction: column; align-items: center;}
+#video-row1 .video-container, #video-row2.video-container {max-width: 90%; margin: 10px 0;}
 .code-window {max-width: 90%; margin-left: 5%;}
 #site-cellar {height: 70px; padding: 0 10px;}
 #footer-logo {height: 40px;}
@@ -67,10 +68,11 @@ body, html {margin:0; padding:0; height:100%; background:#ffffff;}
 @media (max-width: 767px) {
 #header-logo {height: 50px;}
 #site-hat {height: 60px; padding: 0 0.5rem;}
+#sidebar-button {cursor: pointer;font-size: 24px; padding: 0 6px; margin-left: 12px; border-radius: 4px; background: #8f8f8f79;user-select: none; height: 100%; display: flex;align-items: center;}
 #side-menu {width: 180px; padding: 60px 10px 20px;}
 #side-menu a {font-size: 20px; margin: 8px 0;}
 #site-content {padding: 60px 15px 20px;}
-.video-container {display: inline-block; position: relative; width: 100%; max-width: none; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.15); margin: 5px 0;}
+#video-row1 .video-container, #video-row2.video-container {max-width: 95%;}
 .code-window {max-width: 100%; margin-left: 0; padding: 0 10px;}
 .main-font {font-size: 20px; padding: 0 15px 15px 15px;}
 #site-cellar {height: 60px; padding: 0 5px;}
