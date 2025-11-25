@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео-уроки</title>
+</head>
+    <body>
+        <div class="content-wrapper">
+            <input type="checkbox" id="sidebar-toggle" hidden> 
+            <aside id="side-menu">
+                    <list spacing="s" align-x="center"> 
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
+                    </list>
+            </aside>
+
+                <header id="site-hat">
+                    <hstack spacing="l" id="header-hstack">
+                        <label for="sidebar-toggle" id="sidebar-button">☰</label>
+                            <hstack id="logo-text">
+                                <img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную">
+                                <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
+                            </hstack>
+                    </hstack>
+                </header>
+
+                <main id="site-content">
+                    <vstack id-="video-stack" spacing="xl">
+                        <hstack id="video-row1" spacing="l">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/bJf94iGzDb8?si=GilroHzVGVT5-3Ad" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/3PLSJqfc7Ho?si=riNN-eBqADZkr8Ai" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/knE8qfRj4A4?si=ymQXLMHvzDZxHSfj" allowfullscreen></iframe>
+                            </div>
+                        </hstack>
+                        <hstack id="video-row2" spacing="l">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/XaTwnKLQi4A?si=gPNz-1zx_ZkH89R2" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/5Xd2nqqNfkc?si=SLyMGXAnIGIxQ7QN" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/VTHyPrS06QM?si=yv04mNMPN8oeK7J3" allowfullscreen></iframe>
+                            </div>
+                        </hstack>
+                    </vstack>
+                </main>
+
+        </div>
+                <footer id="site-cellar">
+                    <hstack id="footer-hstack" spacing="s" stretch>
+                        <img src="resources/img/logo_xml.png" id="footer-logo">
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
+                    </hstack>
+                </footer>
+    </body>
+</html>

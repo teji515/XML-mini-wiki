@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование XML в реальных приложениях</title>
+</head>
+    <body>
+        <div class="content-wrapper">
+            <input type="checkbox" id="sidebar-toggle" hidden> 
+            <aside id="side-menu">
+                    <list spacing="s" align-x="center"> 
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
+                    </list>
+            </aside>
+
+                <header id="site-hat">
+                    <hstack spacing="l" id="header-hstack">
+                        <label for="sidebar-toggle" id="sidebar-button">☰</label>
+                            <hstack id="logo-text">
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
+                                <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
+                            </hstack>
+                    </hstack>
+                </header>
+
+                <main id="site-content">
+                    <div class="play-regular main-headers">
+                        <h1>Использование XML в реальных приложениях</h1>
+                    </div>
+                    <p class="play-regular main-font">XML (Extensible Markup Language) активно применяется во множестве областей, где важна <b>структурированная передача данных</b> между разными системами и платформами.
+                        Благодаря читаемому человеку синтаксису и строгим правилам разметки, XML стал стандартом для обмена информацией в корпоративных и веб-средах.</p>
+                    <p class="play-regular main-font"><b>Основные направления использования:</b>
+                        <ul class="play-regular main-font">
+                            <li><b>Конфигурационные файлы.</b><br>Многие программы и фреймворки хранят настройки в формате XML. Пример — web.config в ASP.NET или pom.xml в Apache Maven.</li>
+                            <li><b>Хранение данных.</b><br>В некоторых случаях XML используется как лёгкий формат для хранения и переноса данных (например, в офисных документах .docx, .xlsx — внутри ZIP-архива лежат XML-файлы).</li>
+                            <li><b>Интеграция систем.</b><br>XML применяют для обмена данными между разными приложениями, особенно если они написаны на разных языках или работают на разных платформах.</li>
+                            <li><b>Веб-сервисы.</b><br>Один из ключевых примеров — <b>SOAP (Simple Object Access Protocol)</b>, который использует XML для упаковки запросов и ответов при взаимодействии клиента и сервера.</li>
+                        </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Пример SOAP-запроса</b><br>
+                        SOAP (Simple Object Access Protocol) — это протокол, который определяет формат сообщений для удалённого вызова процедур через HTTP или другие транспортные протоколы.
+                        Все данные в SOAP передаются в виде XML-структуры, заключённой в специальный контейнер — envelope (конверт).
+                        Вот пример SOAP-запроса, который отправляет данные на сервер для вызова метода GetWeather:</p>
+                    <div class="code-window">
+                        <pre class="xml-code-example">
+                            <code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;soap:Envelope 
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+
+    &lt;soap:Body&gt;
+        &lt;GetWeather xmlns="http://example.com/weather"&gt;
+            &lt;City&gt;Berlin&lt;/City&gt;
+            &lt;Country&gt;Germany&lt;/Country&gt;
+        &lt;/GetWeather&gt;
+    &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <p class="play-regular main-font"><b>Объяснение структуры:</b>
+                        <ul class="play-regular main-font">
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;soap:Envelope&gt;</span> - главный контейнер, определяющий границы сообщения.</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;soap:Body&gt;</span> - основная часть, где содержится запрос или ответ.</li>
+                            <li>Элемент <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;GetWeather&gt;</span> - это конкретный метод, который сервер должен вызвать.</li>
+                            <li>Вложенные теги <span style="background-color: rgba(146, 146, 146, 0.363);">(&lt;City&gt;, &lt;Country&gt;)</span> - передают параметры вызова.</li>
+                        </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Ответ от сервера (SOAP response)</b>
+                        <div class="code-window">
+                            <pre class="xml-code-example">
+                                <code>
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;GetWeatherResponse xmlns="http://example.com/weather"&gt;
+      &lt;Temperature&gt;18&lt;/Temperature&gt;
+      &lt;Condition&gt;Partly Cloudy&lt;/Condition&gt;
+    &lt;/GetWeatherResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </p>
+                    <p class="play-regular main-font">Такой способ обмена данными позволяет создавать <a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C" target="_blank">интероперабельные</a> системы, 
+                        где клиент и сервер могут быть написаны на разных языках, но использовать один и тот же формат XML для общения.</p>
+                        <div id="floating-toc">
+                            <button id="toc-button">Открыть <br>Содержание</button>
+                            <nav id="toc-menu" class="toc-hidden">
+                                <ul>
+                                    <li><a href="page1.html">Элементы и атрибуты XML</a></li>
+                                    <li><a href="page2.html">Использование XML в реальных приложениях</a></li>
+                                    <li><a href="page3.html">Сравнение XML с другими форматами данных</a></li>
+                                    <li><a href="page4.html">Namespaces</a></li>
+                                    <li><a href="page5.html">XML-словари</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script src="toc.js"></script>
+                </main>
+
+        </div>
+                <footer id="site-cellar">
+                    <hstack id="footer-hstack" spacing="s" stretch>
+                        <img src="resources/img/logo_xml.png" id="footer-logo" alt="Логотип подвала сайта">
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
+                    </hstack>
+                </footer>
+    </body>
+</html>

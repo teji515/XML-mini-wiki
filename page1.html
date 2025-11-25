@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элементы и атрибуты XML</title>
+</head>
+    <body>
+        <div class="content-wrapper">
+            <input type="checkbox" id="sidebar-toggle" hidden> 
+            <aside id="side-menu">
+                    <list spacing="s" align-x="center"> 
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
+                    </list>
+            </aside>
+
+                <header id="site-hat">
+                    <hstack spacing="l" id="header-hstack">
+                        <label for="sidebar-toggle" id="sidebar-button">☰</label>
+                            <hstack id="logo-text">
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
+                                <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
+                            </hstack>
+                    </hstack>
+                </header>
+
+                <main id="site-content">
+                    <div class="play-regular main-headers">
+                        <h1>Элементы и атрибуты XML</h1>
+                    </div>
+                    <p class="play-regular main-font">XML <b>(eXtensible Markup Language)</b> — это язык разметки, который используется для хранения и передачи структурированных данных.<br>
+                        В отличие от HTML, XML не задаёт визуальное оформление — его задача заключается в описании структуры данных. Основные строительные блоки XML — это <b>элементы</b> и <b>атрибуты</b>.</p>
+                    <ol class="play-regular main-font">
+                        <li><b>Элементы (Tags)</b>
+                            <p class="play-regular main-font">Элемент XML представляет собой основную единицу данных. Он состоит из <b>открывающего тега</b>, <b>содержимого</b> и <b>закрывающего</b> тега:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;name&gt;Abdul&lt;/name&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;name&gt;</span> - <b>открывающий тег</b>, обозначает начало элемента</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">Abdul</span> - <b>содержимое элемента</b></li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;/name&gt;</span> - <b>открывающий тег, конец элемента</b></li>
+                            </ul>
+                            <p class="play-regular main-font"><b>Пустые элементы</b> можно записывать в сокращённой форме:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;city /&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                        <p class="play-regular main-font">Это эквивалентно <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;city&gt;&lt;/city&gt;</span></p></li>
+                        <li><b>Закрывающие теги</b>
+                            <p class="play-regular main-font">Каждый открывающий тег должен иметь соответствующий закрывающий тег. Это обязательное правило XML. <br><br>Примеры:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;age&gt;30&lt;/age&gt;
+&lt;country&gt;Austria&lt;/country&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li>Закрывающий тег повторяет имя открывающего, но с косой чертой /.</li>
+                                <li>Несоответствие имён тегов или отсутствие закрывающего тега приведёт к <b>ошибке парсинга</b>.</li>
+                            </ul></li>                        
+                        <li><b>Вложенность элементов</b>
+                            <p class="play-regular main-font">Элементы могут содержать другие элементы, формируя иерархическую структуру:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;person&gt;
+    &lt;name&gt;Abdul&lt;/name&gt;
+    &lt;age&gt;30&lt;/age&gt;
+        &lt;address&gt;
+            &lt;city&gt;Berlin&lt;/city&gt;
+            &lt;country&gt;Germany&lt;/country&gt;
+        &lt;address&gt;
+&lt;/person&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li>Закрывающий тег повторяет имя открывающего, но с косой чертой /.</li>
+                                <li>Несоответствие имён тегов или отсутствие закрывающего тега приведёт к <b>ошибке парсинга</b>.
+                            </ul>
+                            <p class="play-regular main-font">Правила вложенности:</p>
+                            <list spacing="s" class="play-regular main-font somelist">
+                                <p class="play-regular main-font">1. Каждый родительский элемент может содержать любое количество дочерних элементов.</p>
+                                <p class="play-regular main-font">2. Дочерние элементы должны быть полностью вложены — закрывающий тег родителя идёт после всех закрывающих тегов детей.</p>
+                                <p class="play-regular main-font">3. Элементы <b>не должны пересекаться</b></p>
+                            </list>
+                                <hstack id="compare-divs" spacing="l"><div>
+                                    <p class="play-regular main-font">❌ Неправильно:</p>
+                                    <div class="code-window">
+                                        <pre class="xml-code-example">
+                                            <code>
+&lt;parent&gt;
+    &lt;child1&gt;
+    &lt;child2&gt;&lt;/child2&gt;
+&lt;child1&gt;
+&lt;/parent&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="play-regular main-font">✅ Правильно:</p>
+                                    <div class="code-window">
+                                        <pre class="xml-code-example">
+                                            <code>
+&lt;parent&gt;
+    &lt;child1&gt;&lt;/child1&gt;
+    &lt;child2&gt;&lt;/child2&gt;
+&lt;/parent&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                </hstack>
+                        </li>
+                        <li><b>Атрибуты элементов</b>
+                            <p class="play-regular main-font">Атрибуты позволяют хранить дополнительную информацию о элементе. Атрибуты размещаются внутри открывающего тега и задаются парами <b>имя="значение"</b>:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;person id="123" role="admin"&gt;
+    &lt;name&gt;Abdul&lt;/name&gt;
+&lt;/person&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <ul class="play-regular main-font">
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">id="123"</span> — атрибут с идентификатором элемента</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">role="admin"</span> — атрибут с ролью</li>
+                                <li>Значения атрибутов всегда заключаются в кавычки (" или ').</li>
+                                <li>Атрибуты должны иметь уникальные имена внутри одного элемента.</li>
+                            </ul>
+                        </li>
+                        <li><b>Комбинирование элементов и атрибутов</b>
+                            <p class="play-regular main-font">Элементы и атрибуты можно использовать вместе для построения гибкой структуры данных:</p>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;book id="001" genre="fantasy"&gt;
+    &lt;title&gt;The Hobbit&lt;/title&gt;
+    &lt;author&gt;J.R.R Tolkien&lt;/author&gt;
+    &lt;year&gt;1937&lt;/year&gt;
+&lt;/book&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <p class="play-regular main-font">Здесь:</p>
+                            <ul class="play-regular main-font">
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;book&gt;</span> - родительский элемент с атрибутами id и genre</li>
+                                <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;title&gt;, &lt;author&gt;, &lt;year&gt;</span> - дочерние элементы с текстом</li>
+                            </ul></li>
+                        <li>
+                            <p class="play-regular main-font"><b>Синтаксис XML: ключевые правила</b></p>
+                            <list spacing="s" class="play-regular main-font somelist">
+                            <p><b>1. Корневой элемент: </b>весь документ XML должен иметь один корневой элемент, который охватывает всё содержимое.</p>
+                            <p><b>2. Чувствительность к регистру:</b> &lt;Name&gt; и &lt;name&gt; — это разные элементы.</p>
+                            <p><b>3. Закрытие всех тегов: </b>каждый открывающий тег должен иметь закрывающий.</p>
+                            <p><b>4. Корректная вложенность: </b>элементы не должны пересекаться.</p>
+                            <p><b>5. Использование атрибутов: </b>уникальные имена внутри одного элемента, значения в кавычках.</p>
+                            <p><b>6. Прозрачность пробелов: </b>XML игнорирует лишние пробелы между тегами, но сохраняет их внутри текста.</p>
+                            </list>
+                        </li>
+                        <li><b>Пример корректного готового XML-документа</b>
+                            <div class="code-window">
+                                <pre class="xml-code-example">
+                                    <code>
+&lt;library&gt;
+    &lt;book id="001" genre="fantasy"&gt;
+        &lt;title&gt;The Hobbit&lt;/title&gt;
+        &lt;author&gt;J.R.R Tolkien&lt;/author&gt;
+        &lt;year&gt;1937&lt;/year&gt;
+    &lt;/book&gt;
+    &lt;book id="002" genre="sci-fi"&gt;
+        &lt;title&gt;Dune&lt;/title&gt;
+        &lt;author&gt;Frank Herbert&lt;/author&gt;
+        &lt;year&gt;1965&lt;/year&gt;
+    &lt;/book&gt;
+&lt;/library&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                        <ul class="play-regular main-font">
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;library&gt;</span> - корневой элемент</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;book&gt; </span>- элементы с атрибутами</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;title&gt;, &lt;author&gt;, &lt;year&gt;</span> - дочерние элементы с текстом</li>
+                        </ul></li>
+                    </ol>
+                        <div id="floating-toc">
+                            <button id="toc-button">Открыть <br>Содержание</button>
+                            <nav id="toc-menu" class="toc-hidden">
+                                <ul>
+                                    <li><a href="page1.html">Элементы и атрибуты XML</a></li>
+                                    <li><a href="page2.html">Использование XML в реальных приложениях</a></li>
+                                    <li><a href="page3.html">Сравнение XML с другими форматами данных</a></li>
+                                    <li><a href="page4.html">Namespaces</a></li>
+                                    <li><a href="page5.html">XML-словари</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script src="toc.js"></script>
+                </main>
+
+        </div>
+                <footer id="site-cellar">
+                    <hstack id="footer-hstack" spacing="s" stretch>
+                        <img src="resources/img/logo_xml.png" id="footer-logo" alt="Логотип подвала сайта">
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
+                    </hstack>
+                </footer>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML-словари</title>
+</head>
+    <body>
+        <div class="content-wrapper">
+            <input type="checkbox" id="sidebar-toggle" hidden> 
+            <aside id="side-menu">
+                    <list spacing="s" align-x="center"> 
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
+                    </list>
+            </aside>
+
+                <header id="site-hat">
+                    <hstack spacing="l" id="header-hstack">
+                        <label for="sidebar-toggle" id="sidebar-button">☰</label>
+                            <hstack id="logo-text">
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
+                                <a href="index.html"><text underline class="play-regular header-font">XML <br>mini-wiki</text></a>
+                            </hstack>
+                    </hstack>
+                </header>
+
+                <main id="site-content">
+                    <div class="play-regular main-headers">
+                        <h1>XML-dictionaries</h1>
+                    </div>
+                    <p class="play-regular main-font"><b>XML-словарь</b> - это <b>структурированный набор данных</b>, 
+                        в котором информация хранится в виде пар <b>«ключ — значение»</b> с помощью XML-элементов и атрибутов.
+                        <ul class="play-regular main-font">
+                            <li>Ключи — уникальные идентификаторы элементов.</li>
+                            <li>Значения — текст, числа или другие элементы.</li>
+                            <li>XML-словари позволяют обмениваться данными между системами и сохранять их в структурированном виде.</li>
+                        </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Зачем нужны:</b>
+                        <ul class="play-regular main-font">
+                            <li>Хранение настроек и параметров приложений.</li>
+                            <li>Организация справочников и конфигураций.</li>
+                            <li>Удобство парсинга: программно легко извлекать нужные значения по ключу.</li>
+                            <li>Универсальность: можно использовать в веб-сервисах, мобильных приложениях и desktop-программах.</li>
+                        </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Структура XML-словаря</b><br>
+                        <span style="font-style: italic;">Пример простого словаря:</span>
+                        <div class="code-window">
+                            <pre class="xml-code-example">
+                                <code>
+&lt;Dictionary&gt;
+    &lt;Entry key="en"&gt;English&lt;/Entry&gt;
+    &lt;Entry key="de"&gt;Deutsch&lt;/Entry&gt;
+    &lt;Entry key="fr"&gt;Français&lt;/Entry&gt;
+&lt;/Dictionary&gt;
+                                </code>
+                            </pre>
+                        </div>
+                        <ul class="play-regular main-font">
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;Dictionary&gt;</span> - корневой элемент.</li>
+                            <li><span style="background-color: rgba(146, 146, 146, 0.363);">&lt;Entry&gt;</span> - отдельный элемент словаря.</li>
+                            <li>Атрибут <span style="background-color: rgba(146, 146, 146, 0.363);">key</span> хранит уникальный идентификатор.</li>
+                            <li>Содержимое элемента - значение.</li>
+                        </ul>
+                    </p>
+                    <p class="play-regular main-font"><b>Особенности</b>
+                        <ol class="play-regular main-font">
+                            <li>Ключи должны быть <b>уникальными</b> внутри словаря.</li>
+                            <li>Можно использовать <b>вложенные словари</b>, если нужна иерархия:
+                                <div class="code-window">
+                                    <pre class="xml-code-example">
+                                        <code>
+&lt;Dictionary&gt;
+    &lt;Entry key="colors"&gt;
+        &lt;Dictionary&gt;
+            &lt;Entry key="red"&gt;#FF0000&lt;/Entry&gt;
+            &lt;Entry key="green"&gt;#00FF00&lt;/Entry&gt;
+        &lt;/Dictionary&gt;
+    &lt;/Entry&gt;
+&lt;/Dictionary&gt;
+                                        </code>
+                                    </pre>
+                                </div></li>
+                            <li>XML-словари легко валидировать с помощью <a href="https://docs.agredator.ru/docs/smev/xsd/" target="_blank">XSD-схем</a>, что гарантирует правильность структуры.</li>
+                            <li>Часто используются вместе с <b>конфигурационными файлами</b>, настройками приложений и локализацией <a href="https://www.i18next.com/" target="_blank">i18n</a>.</li>
+                        </ol>
+                    </p>
+                    <p class="play-regular main-font">XML-словарь — это удобный, <b>гибкий способ хранить данные в формате «ключ — значение»</b>, 
+                        который легко читается и обрабатывается программами. Он подходит для справочников, настроек и передачи структурированных данных между системами.</p>
+                        <div id="floating-toc">
+                            <button id="toc-button">Открыть <br>Содержание</button>
+                            <nav id="toc-menu" class="toc-hidden">
+                                <ul>
+                                    <li><a href="page1.html">Элементы и атрибуты XML</a></li>
+                                    <li><a href="page2.html">Использование XML в реальных приложениях</a></li>
+                                    <li><a href="page3.html">Сравнение XML с другими форматами данных</a></li>
+                                    <li><a href="page4.html">Namespaces</a></li>
+                                    <li><a href="page5.html">XML-словари</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script src="toc.js"></script>
+                </main>
+
+        </div>
+                <footer id="site-cellar">
+                    <hstack id="footer-hstack" spacing="s" stretch>
+                        <img src="resources/img/logo_xml.png" id="footer-logo" alt="Логотип подвала сайта">
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
+                    </hstack>
+                </footer>
+    </body>
+</html>

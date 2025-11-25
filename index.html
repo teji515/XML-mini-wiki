@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML mini-wiki</title>
+</head>
+    <body>
+        <div class="content-wrapper">
+            <input type="checkbox" id="sidebar-toggle" hidden> 
+            <aside id="side-menu">
+                    <list spacing="s" align-x="center"> 
+                        <a class="play-regular somebutton" href="index.html">Главная</a>
+                        <a class="play-regular somebutton" href="useful-links.html">Полезные ресурсы</a>
+                        <a class="play-regular somebutton" href="video-lessons.html">Видео-уроки</a>
+                        <a class="play-regular somebutton" href="feedback.html">Обратная связь</a>
+                        <a class="play-regular somebutton" href="about.html">О сайте</a>
+                        <a class="play-regular somebutton" href="faq.html">FAQ</a>
+                    </list>
+            </aside>
+
+                <header id="site-hat">
+                    <hstack spacing="l" id="header-hstack">
+                        <label for="sidebar-toggle" id="sidebar-button">☰</label>
+                            <hstack id="logo-text">
+                                <a href="index.html"><img src="resources/img/logo_xml.png" id="header-logo" alt="header logo image" title="На главную"></a>
+                                <a href="index.html"><span class="play-regular header-font">XML <br>mini-wiki</span></a>
+                            </hstack>
+                    </hstack>
+                </header>
+
+                <main id="site-content">
+                    <div class="play-regular main-headers">
+                        <h1>Что такое XML</h1>
+                    </div>
+                    <p class="play-regular main-font">XML (eXtensible Markup Language) — это расширяемый язык разметки, предназначенный для хранения и передачи данных в структурированном виде. 
+                        Данные находятся внутри тегов, которые помогают организовать данные в логической иерархии, понятной человеку и компьютеру. </p>
+                        <p class="play-regular main-font"><span style="font-style: italic">Пример XML разметки:</span></p>
+                    <div class="code-window">
+                        <pre class="xml-code-example"><code>
+&lt;message&gt;
+    Hello, World!
+&lt;/message&gt;
+                        </code></pre>
+                    </div>
+                    <p class="play-regular main-font">В нашем случае &lt;message&gt; и &lt;/message&gt; — это теги, которые определяют начало и конец элемента. Фраза «Привет, мир!» — это данные внутри тега, которые необходимо сохранить или передать. 
+                        Визуально XML напоминает HTML, однако у этих языков разметки разное назначение. HTML предназначен для отображения информации в браузерах, тогда как XML используется для хранения и передачи данных между различными системами или приложениями. 
+                        XML — это текстовый формат, поэтому его легко обрабатывать с помощью различных программ и языков программирования.
+                    <p class="play-regular main-font">XML применяется во множестве областей. Его часто используют для обмена данными между серверами и клиентами в веб-сервисах и API. 
+                        Например, протокол <b>SOAP</b> (Simple Object Access Protocol) передаёт сообщения между сервисами в формате XML.</p>
+                    <p class="play-regular main-font"><span style="font-style: italic">Вот пример SOAP-запроса:</span></p>
+                    <div class="code-window">
+                        <pre class="xml-code-example"><code>
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"&gt;
+   &lt;soap:Header/&gt;
+   &lt;soap:Body&gt;
+       &lt;m:GetStockPrice xmlns:m="https://www.example.org/stock"&gt;
+           &lt;m:StockName&gt;GOOG&lt;/m:StockName&gt;
+       &lt;/m:GetStockPrice&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+                        </code></pre>
+                    </div>
+                    <p class="play-regular main-font">Здесь показан запрос на то, сколько стоит акция GOOG (Google). Он отправляется на сервер, 
+                        который обрабатывает его и возвращает ответ с текущей ценой.</p>
+                    <p class="play-regular main-font">Также XML часто встречается в конфигурационных файлах, которые содержат параметры и настройки программного обеспечения:</p>
+                    <div class="code-window">
+                        <pre class="xml-code-example"><code>
+&lt;config&gt;
+   &lt;database&gt;
+       &lt;host&gt;localhost&lt;/host&gt;
+       &lt;port&gt;3306&lt;/port&gt;
+       &lt;username&gt;root&lt;/username&gt;
+       &lt;password&gt;password&lt;/password&gt;
+   &lt;/database&gt;
+&lt;/config&gt;
+                        </code></pre>
+                    </div>
+                    <p class="play-regular main-font">В этом примере указаны параметры подключения к базе данных. 
+                        Элементы &lt;host&gt;, &lt;port&gt;, &lt;username&gt;, и &lt;password&gt; содержат информацию о сервере базы данных, порте подключения и учётные данные для доступа.
+                        Помимо составления конфигурационных файлов, XML можно использовать для обмена информацией между различными системами управления базами данных (СУБД). 
+                        Например, вы можете экспортировать данные о продуктах из одной системы и импортировать их в другую, даже если эти системы используют разные внутренние форматы хранения информации.</p>
+                    <div class="play-regular main-headers">
+                        <h1>Как устроен и из чего состоит XML</h1>
+                    </div>
+                    <p class="play-regular main-font">XML-файл состоит из элементов, атрибутов, текста и других компонентов, которые определяют его структуру и функциональность.</p>
+                    <p class="play-regular main-font"><span style="font-style: italic;">Как это устроено:</span></p>
+                    <list spacing="l" class="play-regular main-font">
+                        <p><b>Декларация XML.</b> Разметка начинается с записи: <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;xml version="1.0» encoding="UTF-8»?&gt;</span>. 
+                            Эта строка указывает версию XML и кодировку документа, что помогает правильно интерпретировать содержимое файла.</p>
+                        <p><b>Элементы. </b>Это основные строительные блоки XML-документа. Они заключены в теги — например, <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;book&gt;…&lt;/book&gt;</span> — и могут содержать текст, атрибуты и другие элементы.</p>
+                        <p><b>Атрибуты. </b>Это дополнительные данные, которые можно добавить к элементам, чтобы более точно указать их характеристики. 
+                            Они записываются внутри открывающего тега и позволяют добавлять дополнительную информацию без создания новых элементов. 
+                            Например, в элементе <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;book genre="учебник"&gt;</span> атрибут <span style="background-color: rgba(146, 146, 146, 0.363);">genre</span> указывает на жанр книги, что помогает более точно описать её содержание.</p>
+                        <p><b>Текстовое содержимое. </b>К тексту относится всё, что находится между открывающим и закрывающим тегами элемента. Например, <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;title&gt;XML для начинающих&lt;/title&gt;</span>.</p>
+                        <p><b>Комментарии. </b>Это элементы разметки, которые позволяют добавлять заметки и пояснения в код. Они заключены в <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;! --… --&gt;</span>, не влияют на обработку документа и нужны для удобства разработчиков.</p>
+                    </list>
+                    <div class="play-regular main-headers">
+                        <h1>Области применения</h1>
+                    </div>
+                    <p class="play-regular main-font">Задумываясь, для чего нужен XML, требуется понимать – области его использования разнообразны. 
+                        Данный язык применяется там, где необходимо выделить логическое содержимое документа для дальнейшей обработки. Этот формат рекомендован Консорциумом Всемирной паутины (W3C). 
+                        Часто XML встречается в API. Тогда, когда ответ от сервера поступает в виде соответствующих файлов.</p>
+                        <p class="play-regular main-font"><span style="font-style: italic;">При помощи XML можно:</span></p>
+                    <list class="play-regular main-font somelist" spacing="s" align-x="center">
+                        <p>Записывать иерархию – «один элемент подчиняется другому»;</p>
+                        <p>Осуществлять разметку текста по смыслу – от важного элемента к второстепенному;</p>
+                        <p>Хранить типовые данные – настройки приложений и программ, названия элементов, скрипты;</p>
+                        <p>Размечать текст (text) для его дальнейшего применения в машинном обучении;</p>
+                        <p>Хранить результаты работы тестовых редакторов.</p>
+                    </list>
+                    <div class="play-regular main-headers">
+                        <h1>Ключевые особенности</h1>
+                    </div>
+                    <p class="play-regular main-font">Рассматриваемый язык описания документов и веб-страниц предусматривает ряд особенностей. 
+                        Надо запомнить их перед использованием:</p>
+                        <ol class="play-regular main-font">
+                            <li>XML гарантирует работу большинства приложений, даже если добавить или удалить часть информации. 
+                                Он поддерживает инструменты и элементы для создания новых версий (new versions) файлов, объектов.</li>
+                            <li>Данные, которые хранятся в XML-документах, являются машинно-независимыми. 
+                                Это связано с тем, что информация размещается в файле в виде текстовом формате.</li>
+                            <li>Язык просто понять людям и устройствам. Его основным преимуществом является высокий уровень читаемости. Пример – для обозначения выделения текста жирным необходимо написать 
+                                <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;Жирный&gt;&lt;/Жирный&gt;</span>. Аналогичный синтаксис в HTML будет выглядеть как <span style="background-color: rgba(146, 146, 146, 0.363);">&lt;b&gt;&lt;/b&gt;</span>.</li>
+                            <li>Синтаксис XML разнообразен и обширен. Большинство имеющихся задач можно решить простыми и производительными способами. 
+                                Изучение этого Языка Разметки желательно, но не обязательно.</li>
+                            <li>XML гибок. 
+                                Он сопряжен с отсутствием жестких ограничений, что позволяет одной и той же структуре быть представленной множеством методов/способов.</li>
+                        </ol>
+                        <div id="floating-toc">
+                            <button id="toc-button">Открыть <br>Содержание</button>
+                            <nav id="toc-menu" class="toc-hidden">
+                                <ul>
+                                    <li><a href="page1.html">Элементы и атрибуты XML</a></li>
+                                    <li><a href="page2.html">Использование XML в реальных приложениях</a></li>
+                                    <li><a href="page3.html">Сравнение XML с другими форматами данных</a></li>
+                                    <li><a href="page4.html">Namespaces</a></li>
+                                    <li><a href="page5.html">XML-словари</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <script src="toc.js"></script>
+                </main>
+
+        </div>
+                <footer id="site-cellar">
+                    <hstack id="footer-hstack" spacing="s" stretch>
+                        <img src="resources/img/logo-footer.png" id="footer-logo" alt="Логотип подвала сайта">
+                        <p class="play-regular main-font">© 2025 XML Mini-Wiki, Author: teji515</p>
+                    </hstack>
+                </footer>
+    </body>
+</html>
